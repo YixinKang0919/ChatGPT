@@ -28,12 +28,15 @@ ENGINES = [
     "gpt-3.5-turbo-0301",
     "gpt-3.5-turbo-0613",
     "gpt-3.5-turbo-16k-0613",
+    "gpt-3.5-turbo-1106",
     "gpt-4",
     "gpt-4-0314",
     "gpt-4-32k",
     "gpt-4-32k-0314",
     "gpt-4-0613",
     "gpt-4-32k-0613",
+    "gpt-4-1106-preview",
+    "gpt-4-1106-vision-preview"
 ]
 
 
@@ -66,10 +69,10 @@ class Chatbot:
         self.max_tokens: int = max_tokens or (
             31000
             if "gpt-4-32k" in engine
-            else 7000
-            if "gpt-4" in engine
-            else 15000
-            if "gpt-3.5-turbo-16k" in engine
+            #else 7000
+            #if "gpt-4" in engine
+            #else 15000
+            #if "gpt-3.5-turbo-16k" in engine
             else 4000
         )
         self.truncate_limit: int = truncate_limit or (
